@@ -14,7 +14,7 @@ print(result)
 
 def multiply(a, b):
     return a * b
-result = multiply(4,3)
-result = multiply(-4,3)
-result = multiply(-4,-3)
-print(result)
+print(multiply(4,3))
+print(multiply(-4,3))
+print(multiply(-4,-3))
+
