@@ -10,7 +10,7 @@ def multiply(a, b):
 def divide(a, b):
     if b == 0:
         return "Error: Division by zero is not Allowed."
-        return a / b
+    return a / b
 
 print("Addition:")
 print(add(10,5))
