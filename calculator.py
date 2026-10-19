@@ -1,3 +1,6 @@
+operator  = input("Choose an opperation (+, -, *, /):")
+print(f"you choice this :{operator}")
+
 def add(a,b):
     return a + b
 
