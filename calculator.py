@@ -18,4 +18,13 @@ print(add(-3,8))
 print(add(-5,-2))
 
 print("\nSubtraction")
+print(subtract(10,5))
+print(subtract(3,8))
+
+
+print("\nMultiplication")
+print(multiply(4,3))
+print(multiply(-4,3))
+print(multiply(-4,-3))
+
 
