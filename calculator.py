@@ -27,4 +27,9 @@ print(multiply(4,3))
 print(multiply(-4,3))
 print(multiply(-4,-3))
 
+print("\nDivision")
+print(divide(7,2))
+print(divide(-6,2))
+print(divide(5,0))
+
 
