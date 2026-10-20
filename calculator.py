@@ -8,6 +8,7 @@ def multiply(a, b):
     return a * b
 
 
+
 def divide(a, b):
     if b == 0:
         return "Error: Division by zero is not allowed."
@@ -16,7 +17,7 @@ def divide(a, b):
 operator = input("Choose an operation (+, -, *, /): ")
 if operator not in ["+","-", "*", "/"]:
     print("Unsupported operation.")
-
+    exit()
 while True:
     try:
         num1 = float(input("Enter first number: "))
