@@ -13,7 +13,6 @@ def divide(a, b):
         return "Error: Division by zero is not allowed."
     return a / b
 
-
 while True:
     print("\n=== WELCOME TO MY CLI CALCULATOR ===")
     print("1. Addition (+)")
