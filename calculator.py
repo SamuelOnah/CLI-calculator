@@ -14,9 +14,11 @@ def divide(a, b):
     return a / b
 
 operator = input("Choose an operation (+, -, *, /): ")
-
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+try:
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+except ValueError:
+    print("Invalid input! Please enter numbers only.")
 
 if operator == "+":
     print(add(num1, num2))
