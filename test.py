@@ -1,8 +1,8 @@
 operator = input("Choose + or -: ")
 
 if operator == "+":
-    print("successs")
+    print("success")
 elif operator == "-":
-    print(subtract(5, 3))
+    print("success")
 else:
     print("failed")
