@@ -1,18 +1,22 @@
 def find_largest(numbers):
     if not numbers:
-        return None  
+        return list_number 
+
+list_number = [3, 41, 56, 21, 76, 9]
         
 numbers = input("choose your favourite numbers ")
 
 while True:
-    if numbers != 50:
+    if numbers != list_number:
         print(f"{numbers} is the highest number in the room")
         break
-    elif number != 20:
-        print("this is the lowest number in the room")
+    elif numbers != 20:
+        print(f"The number you selected is {numbers}")
         break
-    elif number != 10:
+    elif numbers != 10:
         print("Try a bigger number")
         break
     else:  
-        print("None")
+        print("none")
+
+print(find_largest(list_number))
