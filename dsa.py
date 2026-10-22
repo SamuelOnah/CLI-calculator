@@ -1,22 +1,20 @@
-numbers = input("choose your favourite numbers ")
-
-list_number = [3, 41, 56, 21, 76, 9]
-
 def find_largest(numbers):
     if not numbers:
-        print(list_number)
+        return None
+    
+    largest = numbers[0]
+    for num in numbers:
+        if num > largest:
+            largest = num          
+    return largest
 
-while True:
-    if numbers != list_number:
-        print(f"{numbers} is the highest number in the room")
-        break
-    elif numbers != 20:
-        print(f"The number you selected is {numbers}")
-        break
-    elif numbers != 10:
-        print("Try a bigger number")
-        break
-    else:  
-        print("NONE")
 
-print(find_largest(list_number))
+user_input = input("Enter numbers separated by spaces ( 3 41 56 21): ")
+
+try:
+    numbers_list = [float(x) for x in user_input.split()]
+    result = find_largest(numbers_list)
+    print(f"The largest number is: {result}")
+    
+except ValueError:
+    print("Error: Please make sure you only enter numbers separated by spaces.")
