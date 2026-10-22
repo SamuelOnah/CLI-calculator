@@ -17,6 +17,6 @@ while True:
         print("Try a bigger number")
         break
     else:  
-        print("76")
+        print("NONE")
 
 print(find_largest(list_number))
