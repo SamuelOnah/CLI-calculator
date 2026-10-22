@@ -1,10 +1,10 @@
-def find_largest(numbers):
-    if not numbers:
-        return list_number 
+numbers = input("choose your favourite numbers ")
 
 list_number = [3, 41, 56, 21, 76, 9]
-        
-numbers = input("choose your favourite numbers ")
+
+def find_largest(numbers):
+    if not numbers:
+        print(list_number)
 
 while True:
     if numbers != list_number:
