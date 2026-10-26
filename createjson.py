@@ -5,9 +5,11 @@ import os
 FILE = "tickets.json"
 
 def create_ticket():
-    description = input("enter ticket description: ").strip
+    title =  input("Enter title: ").strip()
+    description = input("Enter ticket description: ").strip()
 
-    if not description:
+
+    if not title or not description:
         print("Enter correct description")
         return 
 
@@ -18,27 +20,27 @@ def create_ticket():
             with open(FILE, "r") as file:
                 tickets = json.load(file)
         except (json.JSONDecodeError, OSError):
-            print("Error: couldnot read tickets.json")
-            return 
+            print("Error: could'nt read tickets.json")
+            tickets = []
 
     ticket_id = max(
         [t["id"] for t in tickets],
         default=0
     ) + 1
 
-    ticket = {
+    tickets.append({
         "id": ticket_id,
+        "title": title,
         "description": description
-    }
-    tickets.appends(ticket)
+    })
 
-    if os.path.exist(FILE):
-        try:
-            with open(FILE, "w") as file:
-                json.dumb(tickets, file, indent=4)
-                print(f"Ticket created successfully! {ticket_id}")        
-        except OSError:
-            print("Error: could not read ticket")
+
+    try:
+        with open(FILE, "w") as file:
+            json.dump(tickets, file, indent=4)
+        print(f"Ticket created successfully! {FILE}")        
+    except OSError:
+        print("Error: could not read ticket")
 
 if __name__ == "__main__":
     create_ticket()
